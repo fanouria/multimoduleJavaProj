@@ -11,7 +11,7 @@ pipeline{
                 url:"https://github.com/fanouria/multimoduleJavaProj.git"
             }
         }*/
-        stage("Clean old mvn output"){
+        stage("Clean old mvn output."){
             steps{
                 bat "mvn clean"
             }
