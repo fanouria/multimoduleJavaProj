@@ -7,13 +7,13 @@ pipeline{
         stage("Initial stage"){
             steps{
                 git branch: 'main',
-                credentialsId: 'github_credentials',
+                credentialsId: '4ab33092-3d31-489c-a759-84a6ffd465bb',
                 url:"https://github.com/fanouria/multimoduleJavaProj.git"
             }
         }
         stage("Compile"){
             steps{
-                echo "mvn clean compile"
+                bat "mvn clean compile"
             }
         }
         stage("Testing"){
