@@ -4,11 +4,16 @@ pipeline{
         maven "maven-3.6.1"
     } 
     stages{
-        stage("Initial stage"){
+        /*stage("Initial stage"){
             steps{
                 git branch: 'main',
                 credentialsId: '4ab33092-3d31-489c-a759-84a6ffd465bb',
                 url:"https://github.com/fanouria/multimoduleJavaProj.git"
+            }
+        }*/
+        stage("Clean old mvn output"){
+            steps{
+                bat "mvn clean"
             }
         }
         stage("Compile"){
